@@ -9,12 +9,13 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/pagination'
 import 'swiper/css/autoplay'
 import { EffectFade, Pagination, Autoplay, Navigation } from 'swiper';
-function Footer() {
+function Footer({id}) {
+    const styles = id === 3 ? { display: 'none' } : {};
     SwiperCore.use([Autoplay]);
     SwiperCore.use([Navigation, Pagination]);
     return (
         <>
-            <div className='footer-top'>
+            <div className='footer-top' style={styles}>
                 <div className="header">
                     ᲓᲐᲛᲐᲢᲔᲑᲘᲗ ᲨᲔᲓᲒᲔᲑᲐ, ᲥᲔᲨᲒᲔᲘᲛᲘᲡ, ᲢᲣᲠᲜᲘᲠᲔᲑᲘᲡ ᲓᲐ ᲡᲞᲘᲜ ᲞᲝᲙᲔᲠᲘᲡ 12 SIDE ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ
                 </div>

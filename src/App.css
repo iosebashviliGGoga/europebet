@@ -137,6 +137,7 @@ p, span{
   cursor: pointer;
   background-color: var(--secondaryBackground);
   margin-bottom: 30px;
+  transition: color 0.4s ease;
 }
 .buttons > button span{
   font-size: 14px;
@@ -153,6 +154,7 @@ button.active{
   background-color: var(--mainColor);
   height: 90px;
   border-radius: 12px;
+  transition: color 0.4s ease;
 }
 .main-table > .header{
   height: 70px;
@@ -199,6 +201,7 @@ button.active{
   background-color: var(---thirdBackground);
   margin: 0 24px;
   border-radius: 12px;
+  padding-bottom: 20px;
 }
 .table > div:first-child{
   display: flex;
@@ -218,8 +221,8 @@ button.active{
   height: 12px;
   margin-right: 7px;
 }
-.scrollbar{
-  margin-left: 32px;
+.table > .scrollbar{
+  margin-left: 32px ;
   margin-top: 20px;
   height: 378px;
   overflow: scroll;
@@ -636,4 +639,151 @@ height: 30px;
   padding: 20px 170px;
   text-align: center;
   font-size: 12px;
+}
+/* FINALS */
+.final > img{
+  margin: 24px 24px 16px 24px;
+  background-color: transparent;
+  border-radius: 12px;
+}
+.final .poker-lobby{
+  padding: 0 95px;
+  
+}
+.final .poker-lobby span{
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.2;
+  font-family: unset;
+}
+.final .poker-lobby button{
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--secondaryBackground);
+  padding: 15px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.final .poker-lobby button::before{
+  content: '';
+position: absolute;
+background-color: var(--mainColor);
+border-radius: 30px;
+width: 4px;
+height: 70%;
+top: 15%;
+left: -2px;
+box-shadow: 0px 2px 7px var(--mainColor);
+}
+.flex3{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 25px;
+}
+.flex3 > div{
+  flex: 1;
+}
+.flex3 > div > div:first-child{
+  padding: 19px;
+  background-color: #2C3234;
+  font-size: 13px;
+  font-family: Firago-Bold;
+  border-radius: 10px 10px 0 0;
+}
+
+.flex3 .sagzuri-list{
+  background-color: #25292B;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 8px;
+  border-radius: 0 0 14px 14px ;
+}
+.flex3 .sagzuri-item{
+  background-color: #1C1D1E;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 29px 12px 8px;
+  font-size: 13px;
+  border-radius: 10px;
+  line-height: 1.1;
+  
+
+}
+.sagzuri-item img{
+  margin-right: 12px;
+}
+.final .main-table{
+  margin-bottom: 22px;
+}
+.flex2{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 22px;
+}
+.flex2 > div{
+  flex: 1;
+  
+  
+}
+.flex2 > div > div{
+  background-color: #1E2122;
+  border-radius: 12px;
+  position: relative;
+  min-height: 97px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 28px;
+ justify-content: center;
+ margin-bottom: 20px;
+}
+.flex2 > div p{
+  font-family: mrgvlovani-regular;
+  font-size: 14px;
+
+}
+.flex2 > div p:nth-child(2){
+  font-family: Firago-Bold;
+  font-size: 16px;
+
+}
+.flex2 > div:last-child > div{
+  padding: 28.5px 28px;
+  min-height: 155px;
+}
+.flex2 > div img{
+  position: absolute;
+  top: 0;
+  right: 31px;
+}
+
+.lh{
+  font: unset;
+  font-size: 12px !important;
+  line-height: 1.3;
+}
+.flex2 > div:last-child img{
+  right: 13px;
+}
+.margined{
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+.final .lobby{
+  padding: 0 88px;
+  font-size: 14px;
+  line-height: 1.3;
+  word-break: keep-all;
+}
+.final .content > .header{
+  font-size: 14px;
+}
+.final .main-table .content{
+  padding-bottom: 20px;
 }

@@ -9,13 +9,12 @@ import FinalStage from './components/FinalStage';
 
 
 function App() {
-  const [activeComponent, setActiveComponent] = useState(1);
+  const [activeComponent, setActiveComponent] = useState(3);
 
   const handleButtonClick = (componentIndex) => {
-    
     setActiveComponent(componentIndex);
   }
- 
+
   return (
     <div className="App">
       <div className="container-top">
@@ -26,10 +25,10 @@ function App() {
         <AiOutlineClose />
       </div>
       <div className="container-bottom">
-        
-       <button className="play">
-       ითამაშე
-       </button>
+
+        <button className="play">
+          ითამაშე
+        </button>
       </div>
       <img src={require('./assets/images/background.png')} alt="" />
       <div className="popUp">
@@ -42,7 +41,7 @@ function App() {
           </div>
           <div className='content-container'>
             <div className="buttons">
-              <button  onClick={() => handleButtonClick(1)} className={activeComponent === 1 && 'active'}>
+              <button onClick={() => handleButtonClick(1)} className={activeComponent === 1 && 'active'}>
                 <span>1 - 29 აპრილი</span>
                 <span>Cash Games</span>
               </button>
@@ -50,22 +49,22 @@ function App() {
                 <span>13 - 29 აპრილი</span>
                 <span>Spring series</span>
               </button>
-              <button  onClick={() => handleButtonClick(3)} className={activeComponent === 3 && 'active'}>
+              <button onClick={() => handleButtonClick(3)} className={activeComponent === 3 && 'active'}>
                 <span>30 აპრილი</span>
                 <span>Final Stage</span>
               </button>
             </div>
-            
-          
-           {activeComponent === 1 && <CashGames /> }
-           {activeComponent === 2 && <SpringSeries/> }
-           {activeComponent === 3 && <FinalStage/> }
-           
-            <Footer />
+
+
+            {activeComponent === 1 && <CashGames />}
+            {activeComponent === 2 && <SpringSeries />}
+            {activeComponent === 3 && <FinalStage />}
+
+            <Footer id={activeComponent}/>
           </div>
-          
+
         </div>
-        
+
       </div>
     </div>
   );
