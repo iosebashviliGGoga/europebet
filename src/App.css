@@ -1,69 +1,79 @@
-:root{
+:root {
   --mainColor: #EF5A21;
   --mainBackground: #1C1D1E;
   --secondaryBackground: #2C3234;
   ---thirdBackground: #25292B;
 }
 
-*{
+* {
   color: white;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-p, span{
+
+p,
+span {
   font-family: mrgvlovani-regular;
 }
-.App > img{
+
+.App>img {
   width: 100vw;
   height: 100vh;
 }
-.popUp{
+
+.popUp {
   top: 0;
   left: 0;
   position: absolute;
   width: 100vw;
-   height: 100vh;
-  overflow: scroll; 
-  background-color: rgba(0, 0, 0, 0.6)
-  ;
+  height: 100vh;
+  overflow: scroll;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.popUp::-webkit-scrollbar{
+
+.popUp::-webkit-scrollbar {
   display: none;
 }
-.container{
+
+.container {
   position: relative;
   width: 940px;
-  margin:30px auto 0 auto;
+  margin: 30px auto 0 auto;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
-  
+  max-width: 100vw;
+
+
 }
-.container > .banner{
-  width: 940px;
+
+.container>.banner {
+
   height: 350px;
   border-top-left-radius: 20px 20px;
   border-top-right-radius: 20px 20px;
   background: transparent;
+  max-width: 100%;
 }
-.container-top{
+
+.container-top {
   position: fixed;
   width: 940px;
-  
+
   top: 45px;
   display: flex;
   justify-content: space-between;
   padding: 0 15px;
   z-index: 5;
-  
+
   left: 50%;
   transform: translateX(-50%);
-  
+
 }
-.container-top > div{
-  
+
+.container-top>div {
+
   width: 280px;
   height: 34px;
   background-color: #25292B;
@@ -72,7 +82,8 @@ p, span{
   align-items: center;
   justify-content: flex-start;
 }
-.container-top > div span:first-child{
+
+.container-top>div span:first-child {
   font-size: 13px;
   padding: 6px 10px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -80,13 +91,15 @@ p, span{
   margin-left: 5px;
   font-family: mrgvlovani-regular;
 }
-.container-top > div span:last-child {
+
+.container-top>div span:last-child {
   font-size: 15px;
   font-family: Firago-medium;
   margin-left: 11px;
 
 }
-.container-top svg{
+
+.container-top svg {
   margin-right: 20px;
   width: 34px;
   height: 34px;
@@ -94,37 +107,48 @@ p, span{
   background-color: #25292B;
   padding: 9px;
 }
-.top-header{
+
+.top-header {
   padding-left: 44px;
   padding-bottom: 34px;
   background-color: var(--mainBackground);
 }
-.top-header p:first-child{
+
+.top-header p:first-child {
   font-size: 20px;
   font-family: Firago-medium;
   margin-bottom: 14px;
   margin-top: 24px;
 }
-.top-header p:last-child{
+
+.top-header p:last-child {
   font-size: 16px;
-  color:  rgba(255, 255, 255, 0.90);
+  color: rgba(255, 255, 255, 0.90);
 }
-.content-container{
+
+.content-container {
   width: 100%;
   background-color: var(--mainBackground);
   padding: 0 43px;
   margin-bottom: 92px;
 }
-.header{
+
+.content-container>.main-table:nth-child(3) {
+  margin-top: 23px;
+}
+
+.header {
   font-family: Firago-medium;
 }
-.buttons{
+
+.buttons {
   display: flex;
-  
+
   border-radius: 12px;
   align-items: center;
 }
-.buttons > button{
+
+.buttons>button {
   flex: 1;
   background-color: inherit;
   outline: none;
@@ -139,26 +163,39 @@ p, span{
   margin-bottom: 30px;
   transition: color 0.4s ease;
 }
-.buttons > button span{
-  font-size: 14px;
+
+.buttons>button span {
+  font-size: 10px;
 }
-.buttons button:last-child{
+
+.buttons button:last-child {
   border-top-right-radius: 20px 20px;
   border-bottom-right-radius: 20px 20px;
 }
-.buttons > button span:last-child{
-  font-size: 18px;
+
+.buttons>button span:last-child {
+  font-size: 14px;
   font-family: Firago-medium;
 }
-button.active{
+
+button.active {
   background-color: var(--mainColor);
   height: 90px;
   border-radius: 12px;
   transition: color 0.4s ease;
 }
-.main-table > .header{
+
+button.active span {
+  font-size: 14px;
+}
+
+button.active span:last-child {
+  font-size: 18px;
+}
+
+.main-table>.header {
   height: 70px;
-  
+
   background-color: var(--secondaryBackground);
   display: flex;
   align-items: center;
@@ -168,7 +205,8 @@ button.active{
   overflow: hidden;
   font-size: 20px;
 }
-.main-table > .header::before{
+
+.main-table>.header::before {
   content: '';
   position: absolute;
   top: -5px;
@@ -178,71 +216,90 @@ button.active{
   height: 10px;
   box-shadow: 0px 2px 7px var(--mainColor);
 }
-.content{
-  
+
+.content {
+
   border: 4px solid #25292B;
   border-top: none;
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
-  background:#171718;
+  background: #171718;
 }
-.content .header{
+
+.content .header {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px 0;
 }
-.content .header > img{
+
+.content .header>img {
   margin-left: 12px;
   cursor: pointer;
 }
-.table{
-  
+
+.table {
+
   background-color: var(---thirdBackground);
   margin: 0 24px;
   border-radius: 12px;
   padding-bottom: 20px;
 }
-.table > div:first-child{
+
+.table>div:first-child {
   display: flex;
-  margin-left: 42px ;
+  margin-left: 42px;
+  margin-right: 42px;
 
 }
-.table > div:first-child > *{
+
+.table>div:first-child>* {
   flex: 1;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   margin-top: 32px;
   font-size: 13px;
   color: #7D7D7D;
 
 }
-.table span > img{
+
+.table>div:first-child>span:last-child {
+  text-align: center;
+}
+
+.table span>img {
   height: 12px;
   margin-right: 7px;
 }
-.table > .scrollbar{
-  margin-left: 32px ;
+
+.table>.scrollbar {
+  margin-left: 32px;
   margin-top: 20px;
   height: 378px;
   overflow: scroll;
-  scrollbar-color:rgb(240,90,34) rgb(37,41,43);
+  scrollbar-color: rgb(240, 90, 34) rgb(37, 41, 43);
   scrollbar-width: 4px;
-  
+
 }
+
 .scrollbar::-webkit-scrollbar {
-  width: 4px; /* Width of the scrollbar */
-  
+  width: 4px;
+  /* Width of the scrollbar */
+
 }
-.scrollbar::-webkit-scrollbar-track  {
-  background: #2C3234; /* Color of the track */
+
+.scrollbar::-webkit-scrollbar-track {
+  background: #2C3234;
+  /* Color of the track */
 }
+
 .scrollbar::-webkit-scrollbar-thumb {
-  background: var(--mainColor); /* Color of the track */
+  background: var(--mainColor);
+  /* Color of the track */
   border-radius: 12px;
 }
 
-.scrollbar div{
+.scrollbar div {
   width: 722px;
   display: flex;
   justify-content: space-between;
@@ -255,16 +312,18 @@ button.active{
   margin-bottom: 7px;
 }
 
-.scrollbar div > span{
-  
+.scrollbar div>span {
+
   display: flex;
   align-items: center;
   font-size: 13px;
 }
-.scrollbar div > span:nth-child(2){
+
+.scrollbar div>span:nth-child(2) {
   padding-left: 60px;
 }
-.scrollbar > div > span:first-child{
+
+.scrollbar>div>span:first-child {
   width: 28px;
   height: 28px;
   background-color: var(--secondaryBackground);
@@ -272,20 +331,23 @@ button.active{
   border-radius: 50%;
   margin-left: 20px;
 }
-.scrollbar span > img{
+
+.scrollbar span>img {
   width: 16px;
   height: 16px;
 }
-.second-table{
-  
+
+.second-table {
+
   background-color: var(---thirdBackground);
   margin: 0 24px;
   margin-top: 24px;
   border-radius: 12px;
-  
+
   padding: 20px 24px;
 }
-.second-table > div{
+
+.second-table>div {
   height: 72px;
   border-radius: 12px;
   display: flex;
@@ -297,41 +359,46 @@ button.active{
   background-color: #202324;
   margin-bottom: 10px;
 }
-.second-table > div::before{
+
+.second-table>div::before {
   content: '';
   position: absolute;
 
-  
+
   background-color: var(--mainColor);
   border-radius: 30px;
   width: 4px;
   height: 46px;
   left: -2px;
-  
+
   box-shadow: 0px 2px 7px var(--mainColor);
 
 }
-.second-table span{
+
+.second-table span {
   font-size: 15px;
   width: 530px;
   line-height: 1.4;
 }
-.second-table img{
+
+.second-table img {
   height: 48px;
   width: 48px;
 }
-.lobby{
+
+.lobby {
   margin: 16px auto 20px auto;
   text-align: center;
   font-size: 14px;
 }
-.lobby a{
+
+.lobby a {
   color: var(--mainColor);
 }
 
 /* FOOTER */
 
-.footer-top{
+.footer-top {
   margin-top: 20px;
   margin-bottom: 55px;
   padding-top: 20px;
@@ -345,7 +412,8 @@ button.active{
   position: relative;
   overflow: hidden;
 }
-.footer-top::before{
+
+.footer-top::before {
   content: '';
   position: absolute;
   top: -5px;
@@ -355,22 +423,29 @@ button.active{
   height: 10px;
   box-shadow: 0px 2px 7px var(--mainColor);
 }
-.footer-top > *{
+
+.footer-top>* {
   width: 650px;
   text-align: center;
   font-size: 13px;
 }
-.footer-top .header{
+
+.footer-top .header {
   font-size: 18px;
+  font-feature-settings: "case" on;
 }
-.terms{
+
+.terms {
   margin-bottom: 55px;
 }
-.terms > .header,.promotions > .header{
+
+.terms>.header,
+.promotions>.header {
   margin-bottom: 32px;
   font-size: 18px;
 }
-.term{
+
+.term {
   padding: 0 25px;
   display: flex;
   align-items: center;
@@ -383,32 +458,34 @@ button.active{
   font-size: 15px;
 }
 
-.swiper-slide img{
+.swiper-slide img {
   width: 233px;
   height: 272px;
   cursor: pointer;
   border-radius: 5px;
 }
-.swiper-initialized{
+
+.swiper-initialized {
   width: 940px !important;
 }
-.container-bottom{
+
+.container-bottom {
   height: 70px;
   position: fixed;
   z-index: 5;
   bottom: 0;
   left: 50%;
-transform: translateX(-50%);
- background-color: #171718;
- width: 940px;
- margin: 0 auto;
- display: flex;
- justify-content: center;
- align-items: center;
- position: fixed;
+  transform: translateX(-50%);
+  background-color: #171718;
+  width: 940px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
 }
 
-.container-bottom::before{
+.container-bottom::before {
   content: '';
   position: absolute;
   top: 0;
@@ -416,11 +493,11 @@ transform: translateX(-50%);
   border-radius: 30px;
   width: 100%;
   height: 3px;
-  
+
 }
 
-.container-bottom .play{
- 
+.container-bottom .play {
+
   border-radius: 3px;
   border: none;
   cursor: pointer;
@@ -429,26 +506,28 @@ transform: translateX(-50%);
   margin: 0 auto;
   background-color: var(--mainColor);
 }
-.promotions{
+
+.promotions {
   margin-bottom: 100px;
 }
 
 
 /* POKER LOBBY */
-.poker-lobby{
+.poker-lobby {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   padding: 10px 0;
   position: relative;
-  
+
 }
-.poker-lobby *{
+
+.poker-lobby * {
   text-align: center;
 }
 
 
-.poker-lobby button{
+.poker-lobby button {
   background-color: var(--mainColor);
   border-radius: 5px;
   border: none;
@@ -458,15 +537,18 @@ transform: translateX(-50%);
   cursor: pointer;
   margin: 0 auto;
 }
-.poker-lobby > p:not(:first-child){
-  color:  rgba(255, 255, 255, 0.90);
+
+.poker-lobby>p:not(:first-child) {
+  color: rgba(255, 255, 255, 0.90);
   font-size: 15px;
   line-height: 1.4;
 }
-.poker-lobby p:first-child{
+
+.poker-lobby p:first-child {
   font-weight: bold;
 }
-.time{
+
+.time {
   display: flex;
   justify-content: flex-start;
   width: 230px;
@@ -480,13 +562,15 @@ transform: translateX(-50%);
   overflow: hidden;
   gap: 15px;
 }
-.time svg{
+
+.time svg {
   color: var(--mainColor);
   background-color: var(--mainColor);
   margin-left: 5px;
   font-size: 22px;
 }
-.time div{
+
+.time div {
   font-size: 18px;
   font-weight: bold;
   width: 35px;
@@ -497,29 +581,37 @@ transform: translateX(-50%);
   border-top-right-radius: 10px 10px;
   border-bottom-right-radius: 10px 10px;
 }
-.poker-lobby > img{
+
+.poker-lobby>img {
   position: absolute;
   bottom: 0;
 }
-.poker-lobby > img:first-child{
+
+.poker-lobby>img:first-child {
   left: 0;
 }
-.poker-lobby > img:last-child{
+
+.poker-lobby>img:last-child {
   right: 0;
 }
 
-button.mainButton{
+button.mainButton {
   background-color: var(--mainColor);
-border-radius: 5px;
-border: none;
-padding: 8px 40px;
+  border-radius: 5px;
+  border: none;
+  padding: 8px 40px;
 
-font-size: 17px;
-cursor: pointer;
-margin: 0 auto;
+  font-size: 17px;
+  cursor: pointer;
+  margin: 0 auto;
 
 }
-.mechanics > div{
+
+.content .mechanics {
+  padding-top: 32px;
+}
+
+.mechanics>div {
   height: 35px;
   border: 2px solid #25292B;
   background-color: var(--mainBackground);
@@ -531,44 +623,52 @@ margin: 0 auto;
   cursor: pointer;
   position: relative;
 }
-.mechanics svg{
+
+.mechanics svg {
   border-radius: 50%;
   background-color: var(--mainColor);
   height: 100%;
   padding: 5px;
-width: 30px;
-border: 2px solid white;
-position: absolute;
-right: -2px;
+  width: 30px;
+  border: 2px solid white;
+  position: absolute;
+  right: -2px;
 }
-.full-border{
+
+.full-border {
   margin-top: 20px;
   border: 4px solid #25292B !important;
   border-radius: 16px;
 }
-.images{
+
+.images {
   padding: 0 24px;
 }
-.images img{
+
+.images img {
   width: 100%;
 }
 
-.halfs > div, .images > div:last-child{
+.halfs>div,
+.images>div:last-child {
   position: relative;
   flex: 1;
 }
-.halfs{
+
+.halfs {
   display: flex;
   gap: 16px;
   margin-bottom: 17px;
 }
-.image-text{
+
+.image-text {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
 }
-.image-text > div{
+
+.image-text>div {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -576,87 +676,103 @@ right: -2px;
   padding-left: 30px;
   gap: 40px;
 }
-.image-text > div > div{
+
+.image-text>div>div {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  
+
 
 }
-.image-text > div > div:first-child span:first-child{
+
+.image-text>div>div:first-child span:first-child {
   font-size: 13px;
   font-weight: bold;
-  
+
 }
-.yell{
+
+.yell {
   font-size: 24px;
   color: #FFBE00;
 }
-.image-text > div > div:last-child{
+
+.image-text>div>div:last-child {
   align-items: center;
 }
-.image-text > div > div:last-child span:first-child{
+
+.image-text>div>div:last-child span:first-child {
   font-size: 12px;
 }
-.halfs button{
+
+.halfs button {
   font-size: 14px;
   padding: 4px 27px;
   background-color: #B78648;
   border: none;
   border-radius: 16px 16px 0 16px;
 }
-.main{
+
+.main {
   width: 100%;
-  
+
 }
-.main > div
-{
+
+.main>div {
   justify-content: center;
   gap: 62px;
   padding: unset;
 }
-.main .yell{
+
+.main .yell {
   text-align: center;
   font-size: 26px;
 }
-.main> div > div:first-child span:first-child{
+
+.main>div>div:first-child span:first-child {
   text-align: center;
   font-size: 22px;
 }
-.main > div > div:last-child span:first-child{
+
+.main>div>div:last-child span:first-child {
   font-size: 16px;
 }
-.main button{
+
+.main button {
   color: #094B3D;
   font-size: 16px;
-padding: 4px 27px;
-background-color: #D7C860;
-border: none;
-border-radius: 16px 16px 0 16px;
-height: 30px;
+  padding: 4px 27px;
+  background-color: #D7C860;
+  border: none;
+  border-radius: 16px 16px 0 16px;
+  height: 30px;
 }
-.LOTR{
+
+.LOTR {
   padding: 20px 170px;
   text-align: center;
   font-size: 12px;
 }
+
 /* FINALS */
-.final > img{
-  margin: 24px 24px 16px 24px;
+.final>img {
+  margin: 22px 24px 15px 24px;
   background-color: transparent;
   border-radius: 12px;
 }
-.final .poker-lobby{
+
+.final .poker-lobby {
   padding: 0 95px;
-  
+
 }
-.final .poker-lobby span{
-  font-size: 14px;
+
+.final .poker-lobby span {
+  font-size: 13px;
   font-weight: bold;
   line-height: 1.2;
   font-family: unset;
 }
-.final .poker-lobby button{
+
+.final .poker-lobby button {
   width: auto;
   height: auto;
   font-size: 14px;
@@ -666,27 +782,31 @@ height: 30px;
   position: relative;
   overflow: hidden;
 }
-.final .poker-lobby button::before{
+
+.final .poker-lobby button::before {
   content: '';
-position: absolute;
-background-color: var(--mainColor);
-border-radius: 30px;
-width: 4px;
-height: 70%;
-top: 15%;
-left: -2px;
-box-shadow: 0px 2px 7px var(--mainColor);
+  position: absolute;
+  background-color: var(--mainColor);
+  border-radius: 30px;
+  width: 4px;
+  height: 70%;
+  top: 15%;
+  left: -2px;
+  box-shadow: 0px 2px 7px var(--mainColor);
 }
-.flex3{
+
+.flex3 {
   display: flex;
   justify-content: space-between;
   gap: 15px;
   padding: 25px;
 }
-.flex3 > div{
+
+.flex3>div {
   flex: 1;
 }
-.flex3 > div > div:first-child{
+
+.flex3>div>div:first-child {
   padding: 19px;
   background-color: #2C3234;
   font-size: 13px;
@@ -694,15 +814,16 @@ box-shadow: 0px 2px 7px var(--mainColor);
   border-radius: 10px 10px 0 0;
 }
 
-.flex3 .sagzuri-list{
+.flex3 .sagzuri-list {
   background-color: #25292B;
   display: flex;
   flex-direction: column;
   gap: 6px;
   padding: 8px;
-  border-radius: 0 0 14px 14px ;
+  border-radius: 0 0 14px 14px;
 }
-.flex3 .sagzuri-item{
+
+.flex3 .sagzuri-item {
   background-color: #1C1D1E;
   display: flex;
   align-items: center;
@@ -711,27 +832,32 @@ box-shadow: 0px 2px 7px var(--mainColor);
   font-size: 13px;
   border-radius: 10px;
   line-height: 1.1;
-  
+
 
 }
-.sagzuri-item img{
+
+.sagzuri-item img {
   margin-right: 12px;
 }
-.final .main-table{
+
+.final .main-table {
   margin-bottom: 22px;
 }
-.flex2{
+
+.flex2 {
   display: flex;
   justify-content: space-between;
   gap: 15px;
   padding: 20px 22px;
 }
-.flex2 > div{
+
+.flex2>div {
   flex: 1;
-  
-  
+
+
 }
-.flex2 > div > div{
+
+.flex2>div>div {
   background-color: #1E2122;
   border-radius: 12px;
   position: relative;
@@ -740,50 +866,415 @@ box-shadow: 0px 2px 7px var(--mainColor);
   flex-direction: column;
   gap: 4px;
   padding: 28px;
- justify-content: center;
- margin-bottom: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-.flex2 > div p{
+
+.flex2>div p {
   font-family: mrgvlovani-regular;
   font-size: 14px;
 
 }
-.flex2 > div p:nth-child(2){
+
+.flex2>div p:nth-child(2) {
   font-family: Firago-Bold;
   font-size: 16px;
 
 }
-.flex2 > div:last-child > div{
+
+.flex2>div:last-child>div {
   padding: 28.5px 28px;
   min-height: 155px;
 }
-.flex2 > div img{
+
+.flex2>div img {
   position: absolute;
   top: 0;
   right: 31px;
 }
 
-.lh{
+.lh {
   font: unset;
   font-size: 12px !important;
   line-height: 1.3;
 }
-.flex2 > div:last-child img{
+
+.flex2>div:last-child img {
   right: 13px;
 }
-.margined{
+
+.margined {
   margin-top: 4px;
   margin-bottom: 12px;
 }
-.final .lobby{
+
+.final .lobby {
   padding: 0 88px;
   font-size: 14px;
   line-height: 1.3;
   word-break: keep-all;
 }
-.final .content > .header{
+
+.final .content>.header {
   font-size: 14px;
 }
-.final .main-table .content{
+
+.final .main-table .content {
   padding-bottom: 20px;
+}
+
+/* MEDIA QUERY */
+
+
+@media screen and (max-width: 992px) {
+  .container>.banner {
+    height: 210px;
+    border-radius: unset;
+  }
+
+  .container-top {
+    position: unset;
+    background-color: var(--mainBackground);
+    width: unset;
+    transform: unset;
+    padding: 16px;
+  }
+
+  .container-top>div span:first-child {
+    background-color: #25292B;
+    margin-left: 0;
+  }
+
+  .container-top>div {
+    background-color: unset;
+  }
+
+  .container-top svg {
+    display: none;
+  }
+
+  .top-header p:first-child {
+    font-size: 16px;
+    margin-top: 0;
+  }
+
+  .top-header p:last-child {
+    font-size: 14px;
+  }
+
+  .top-header {
+    padding-left: 16px;
+  }
+
+  .content-container {
+    padding: 0 16px;
+  }
+
+  .buttons>button span {
+    font-size: 10px;
+  }
+
+  .buttons>button span:last-child {
+    font-size: 12px;
+  }
+
+  button.active span:last-child {
+    font-size: 14px;
+  }
+
+  button.active span {
+    font-size: 11px;
+  }
+
+  .buttons>button {
+    gap: 4px;
+  }
+
+  .main-table>.header {
+    font-size: 16px;
+  }
+
+  .content .header {
+    font-size: 13px;
+  }
+
+  .content .header>img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .content {
+    background-color: var(---thirdBackground);
+  }
+
+  .table {
+    margin: 0 14px;
+    margin-right: 3px;
+    padding-bottom: 0;
+  }
+
+  .table>.scrollbar {
+    margin-left: 0;
+  }
+
+  .table>div:first-child {
+    margin: 0;
+  }
+
+  .scrollbar div {
+    width: auto;
+    height: 45px;
+    padding-right: 20px;
+    padding-left: 13px;
+    margin-right: 11px;
+  }
+
+  .scrollbar div>span {
+    font-size: 10px;
+  }
+
+  .scrollbar>div>span:first-child {
+    margin-left: 0;
+  }
+
+  .scrollbar div>span:nth-child(2) {
+    padding-left: 0;
+  }
+
+  .scrollbar div>span:last-child {
+    max-width: 92px;
+    text-align: center;
+  }
+
+  .scrollbar span>img {
+    display: none;
+  }
+
+  .scrollbar::-webkit-scrollbar {
+    width: 2px;
+    /* Width of the scrollbar */
+
+  }
+  .second-table{
+    margin: 0 14px;
+    margin-top: 13px;
+    padding: 0;
+  }
+  .second-table span{
+    font-size: 12px;
+  }
+  .second-table img{
+    width: 20px;
+    height: 20px;
+  }
+  .second-table > div{
+    height: unset;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+    min-height: 63px;
+    gap: 8px;
+    background-color: #2C3234;
+
+  }
+  .second-table > div::before{
+    height: 50%;
+  }
+  .lobby{
+    font-size: 13px;
+  }
+  .footer-top{
+    
+    padding: 25px 18px 13px 20px;
+    
+  }
+  .footer-top .header{
+    font-size: 16px;
+  }
+  .footer-top > *{
+    width: 100%;
+    font-size: 12px;
+  }
+  .term{
+    margin-bottom: 5px;
+    height: 50px;
+    font-size: 13px;
+    gap: 80px;
+  }
+  .terms > .header, .promotions > .header{
+    font-size: 16px;
+    margin-bottom: 21px;
+  }
+  .term,.term svg path{
+    color: #BBBBBB !important;
+  }
+  .swiper-slide img{
+    width: 155px;
+    height: 180px;
+    max-width: 110%;
+  }
+  .swiper-initialized{
+    width: 120% !important;
+  }
+  .final .main-table .final{
+    padding: 20px;
+    background-color: #171718;
+  }
+  .final > img{
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .final .poker-lobby{
+   padding: 0;
+    
+  }
+  .final .poker-lobby span{
+    padding: 0 15px;
+    font-size: 12px;
+  }
+  .flex3, .flex2{
+    flex-wrap: wrap;
+    padding: 0;
+    padding-top: 20px;
+  }
+  .flex2{
+    flex-direction: column;
+  }
+  .flex3 > div > div:first-child{
+    padding-left: 32px;
+  }
+  .flex3 .sagzuri-list{
+    padding:12px;
+  }
+  .final > .main-table:nth-child(2) > .header{
+    padding: 24px 50px;
+    
+    text-align: center;
+  }
+  .flex2{
+    gap: 0;
+  }
+  .flex2 > div > div{
+    min-height: 80px;
+    padding: 20px;
+    margin-bottom: 10px;
+  }
+  .flex2 > div p:nth-child(2){
+    font-size: 15px;
+  }
+  .flex2 > div p{
+    font-size: 13px;
+  }
+  .final .main-table:nth-child(2) .content{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 0;
+  }
+  .final .lobby{
+    padding: 0 10px;
+    font-size: 13px;
+  }
+  .final .lobby p:first-child{
+    margin-bottom: 10px;
+  }
+  .final .lobby p br{
+    display: none;
+  }
+  .rounder{
+    background-color: #25292B;
+    border-radius: 16px;
+  }
+  .rounder .header{
+    border-radius: 16px;
+  }
+
+  
+  
+  .final .main-table:last-child .header{
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 16px;
+
+  }
+  .final .main-table:last-child .header img{
+    width: 100%;
+  }
+
+
+
+
+
+
+
+
+
+  .bg{
+    background-color: #171718;
+  }
+  .bg .poker-lobby{
+    gap: 0;
+    padding-bottom: 0;
+  }
+  .bg .poker-lobby p:not(:first-child){
+    background-color: #2C3234;
+    font-size: 13px;
+  }
+  .poker-lobby > img{
+    width: 119px;
+    height: 83px;
+  
+ 
+    top: 89px;
+  }
+  .time{
+    font-size: 13px;
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 80px;
+  }
+  .key > .content > .header{
+    display: none;
+  }
+  .key .scrollbar div{
+    gap: 12px;
+    height: 56px;
+  }
+  .key .scrollbar div > span:last-child{
+    max-width: unset;
+    text-align: left;
+    line-height: 1.2;
+    font-size: 12px;
+  }
+  .key .scrollbar > div > span:first-child{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+  .final .key .content{
+    padding-bottom: 13px;
+  }
+  .flex2 > div img{
+    right: 14px;
+  }
+  .bg {
+    border: none;
+  }
+  .bg .poker-lobby p:nth-child(4){
+    padding-top: 9px;
+    padding-bottom: 15px;
+  }
+  .bg .poker-lobby button{
+    margin-bottom: 20px;
+  }
+  .bg p br{
+    display: none;
+  }
+  .bg .poker-lobby p:nth-child(3){
+    padding-top: 12px;
+  }
+  .text-center{
+    text-align: center;
+  }
 }

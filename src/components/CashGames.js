@@ -3,7 +3,7 @@ import React from 'react'
 function CashGames() {
     return (
         <div>
-            <div className="main-table">
+            <div className="main-table rounder">
                 <div className='header'>1 ₾ რეიკი = 1 ქულას</div>
                 <div className="content">
                     <div className="header">

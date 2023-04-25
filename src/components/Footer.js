@@ -5,19 +5,17 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import SwiperCore from 'swiper'
 
-import 'swiper/css/effect-fade';
-import 'swiper/css/pagination'
-import 'swiper/css/autoplay'
+
 import { EffectFade, Pagination, Autoplay, Navigation } from 'swiper';
 function Footer({id}) {
     const styles = id === 3 ? { display: 'none' } : {};
-    SwiperCore.use([Autoplay]);
-    SwiperCore.use([Navigation, Pagination]);
+    
     return (
         <>
             <div className='footer-top' style={styles}>
                 <div className="header">
-                    ᲓᲐᲛᲐᲢᲔᲑᲘᲗ ᲨᲔᲓᲒᲔᲑᲐ, ᲥᲔᲨᲒᲔᲘᲛᲘᲡ, ᲢᲣᲠᲜᲘᲠᲔᲑᲘᲡ ᲓᲐ ᲡᲞᲘᲜ ᲞᲝᲙᲔᲠᲘᲡ 12 SIDE ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲘ
+                    
+                    დამათებით შედგება, ქეშგეიმის, ტურნირების და სპინ პოკერის 12 SIDE ლიდერბორდი
                 </div>
                 <span>
                     * Side ლიდერბორდების შესახებ დეტალური ინფორმაცია იხილეთ პოკერის ლობიში.
@@ -40,12 +38,9 @@ function Footer({id}) {
               მსგავსი აქციები
             </div>
             <Swiper
-              spaceBetween={27}
-              slidesPerView={4}
-              slidesPerGroup={3}
-              loop={true}
-              autoplay={{ delay: 3000, disableOnInteraction: false }}
-              modules={[EffectFade, Pagination]}
+            spaceBetween={27}
+            slidesPerView={3}
+            onSlideChange={() => console.log('slide change')}
             >
               <SwiperSlide> <img src={require('../assets/images/slide1.png')} alt="" /></SwiperSlide>
               <SwiperSlide> <img src={require('../assets/images/carorange.png')} alt="" /></SwiperSlide>

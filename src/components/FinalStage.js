@@ -74,7 +74,7 @@ function FinalStage() {
                 </div>
 
             </div>
-            <div className="main-table">
+            <div className="main-table rounder">
                 <div className="header">
                     ᲛᲝᲘᲒᲔ ᲡᲐᲒᲖᲣᲠᲘ 30 ᲐᲞᲠᲘᲚᲘᲡ ᲤᲘᲜᲐᲚᲣᲠ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ
                 </div>
@@ -88,12 +88,12 @@ function FinalStage() {
                             </div>
                             <div>
                                 <img src={require('../assets/images/poker-item-1-ticket-icon.png')} alt="" />
-                                <p>“Cashgame Highrollers” -</p>
+                                <p>„Cashgame Grinders” --</p>
                                 <p>1 საგზური</p>
                             </div>
                             <div>
                                 <img src={require('../assets/images/poker-item-1-ticket-icon.png')} alt="" />
-                                <p>“Cashgame Highrollers” -</p>
+                                <p>„Tournament Sharks“ -</p>
                                 <p>1 საგზური</p>
                             </div>
 
@@ -122,7 +122,7 @@ function FinalStage() {
                     </div>
                 </div>
             </div>
-            <div className="main-table">
+            <div className="main-table rounder key">
                 <div className='header'><img src={require('../assets/images/key.png')} alt="" /></div>
                 <div className="content">
                     <div className="header">

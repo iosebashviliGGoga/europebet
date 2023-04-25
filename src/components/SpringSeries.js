@@ -6,23 +6,25 @@ function SpringSeries() {
         <>
             <div className='main-table'>
                 <div className="header">
-                    ᲢᲣᲠᲜᲘᲠᲔᲑᲘ ᲓᲐ ᲡᲐᲢᲔᲚᲘᲢᲔᲑᲘ
+                   ტურნირები და სატელიტები
                 </div>
-                <div className="content">
+                <div className="content bg">
                     <div className="poker-lobby">
                         <p>სერიის ფარგლებში ყოველდღე გაიმართება 3 ივენთი:</p>
                         <div className='time'><div><BiTime /></div> 19:00 / 19:30 / 20:00 </div>
                         <p>* ყველა ტურნირზე მოხვედრა შესაძლებელია 0 ლარიდან</p>
                         <p>ტურნირების სრული განრიგის სანახავად გადადი <br />პოკერის ლობიში</p>
-                        <button>პოკერის ლობი</button>
+                       <p>
+                         <button>პოკერის ლობი</button>
+                       </p>
                         <img src={require('../assets/images/promo-left-img.png')} alt="" />
                         <img src={require('../assets/images/promo-right-img.png')} alt="" />
                     </div>
 
                 </div>
             </div>
-            <div className="main-table">
-                <div className='header'>ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</div>
+            <div className="main-table rounder">
+                <div className='header text-center'>ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</div>
                 <div className="content">
                     <div className="header mechanics">
                         <div>
