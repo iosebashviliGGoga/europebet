@@ -17,25 +17,31 @@ function App() {
 
   return (
     <div className="App">
-      
-      <div className="container-bottom">
 
+      <div className="container-bottom">
         <button className="play">
           ითამაშე
         </button>
       </div>
+
       <img src={require('./assets/images/background.png')} alt="" />
       <div className="popUp">
         <div className="container">
-       
+          <div className="registration">
+            <img src={require('./assets/images/logo.png')} alt="" />
+            <div>
+              <button>Sign up</button>
+              <button>Sign in</button>
+            </div>
+          </div>
           <img src={require('./assets/images/banner.jpg')} alt="" className='banner' />
           <div className="container-top">
-        <div>
-          <span>სლოტები</span>
-          <span>10 იანვარი - 12 მარტი</span>
-        </div>
-        <AiOutlineClose />
-      </div>
+            <div>
+              <span>სლოტები</span>
+              <span>10 იანვარი - 12 მარტი</span>
+            </div>
+            <AiOutlineClose />
+          </div>
           <div className="top-header">
             <p>მოიპოვე 10 საგზურიდან ერთ-ერთი</p>
             <p>მოხვდი პოკერის ფესტივალზე მალტაში</p>
@@ -50,7 +56,7 @@ function App() {
                 <span>13 - 29 აპრილი</span>
                 <span>Spring series</span>
               </button>
-              <button onClick={() => handleButtonClick(3)} className={activeComponent === 3? 'active' : ""}>
+              <button onClick={() => handleButtonClick(3)} className={activeComponent === 3 ? 'active' : ""}>
                 <span>30 აპრილი</span>
                 <span>Final Stage</span>
               </button>
@@ -61,7 +67,7 @@ function App() {
             {activeComponent === 2 && <SpringSeries />}
             {activeComponent === 3 && <FinalStage />}
 
-            <Footer id={activeComponent}/>
+            <Footer id={activeComponent} />
           </div>
 
         </div>

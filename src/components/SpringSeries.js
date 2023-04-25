@@ -23,9 +23,9 @@ function SpringSeries() {
 
                 </div>
             </div>
-            <div className="main-table rounder">
+            <div className="main-table rounder spring-series">
                 <div className='header text-center'>ᲛᲝᲮᲕᲓᲘ TOP20 ᲚᲘᲓᲔᲠᲑᲝᲠᲓᲨᲘ ᲢᲣᲠᲜᲘᲠᲔᲑᲖᲔ ᲓᲐᲒᲠᲝᲕᲔᲑᲣᲚᲘ ᲥᲣᲚᲔᲑᲘᲗ</div>
-                <div className="content">
+                <div className="content ">
                     <div className="header mechanics">
                         <div>
                             ქულების დაგროვების მექანიკა <FaChevronDown />

@@ -374,7 +374,9 @@ button.active span:last-child {
   box-shadow: 0px 2px 7px var(--mainColor);
 
 }
-
+.key .table > .scrollbar{
+  margin-left: 22px;
+}
 .second-table span {
   font-size: 15px;
   width: 530px;
@@ -437,6 +439,9 @@ button.active span:last-child {
 
 .terms {
   margin-bottom: 55px;
+}
+.registration{
+  display: none;
 }
 
 .terms>.header,
@@ -647,6 +652,7 @@ button.mainButton {
 
 .images img {
   width: 100%;
+  border-radius: 12px;
 }
 
 .halfs>div,
@@ -781,6 +787,7 @@ button.mainButton {
   padding: 15px 20px;
   position: relative;
   overflow: hidden;
+  margin-top: 10px;
 }
 
 .final .poker-lobby button::before {
@@ -1035,10 +1042,12 @@ button.mainButton {
 
   .scrollbar>div>span:first-child {
     margin-left: 0;
+    
   }
 
   .scrollbar div>span:nth-child(2) {
     padding-left: 0;
+    
   }
 
   .scrollbar div>span:last-child {
@@ -1122,6 +1131,7 @@ button.mainButton {
   }
   .final > img{
     max-width: 100%;
+    min-height: 201px;
     margin: 0;
     margin-bottom: 20px;
   }
@@ -1276,5 +1286,114 @@ button.mainButton {
   }
   .text-center{
     text-align: center;
+  }
+  .main-table > .text-center{
+    padding-top: 28px;
+    padding-bottom: 18px;
+    height: auto;
+  }
+  .mechanics > div,.table > div:first-child > *{
+    font-size: 12px;
+
+  }
+  .table > div:first-child > *{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .table > div:first-child > span:first-child{
+    flex: 0 0 80px;
+  }
+  .table > div:first-child span{
+    margin-top: 4px;
+  }
+  .table span > img{
+    width: 15px;
+    height: 10px;
+    margin-right: 4px;
+  }
+  .spring-series .content:last-child{
+    border: none !important;
+    border-radius: 0 !important;
+    background-color: #1C1D1E;
+
+  }
+  .spring-series .content:last-child .header{
+    justify-content: flex-start;
+    border-radius: 0 !important;
+  }
+  .spring-series  .lobby{
+    display: flex;
+flex-direction: column;
+gap: 10px;
+  }
+  .halfs{
+    flex-direction: column;
+
+  }
+  .halfs img, .images img{
+    height: 85px;
+    min-height: 80px;
+  }
+  .spring-series .content:last-child .images{
+    padding: 0;
+  }
+  .image-text > div {
+    padding-left: 20px;
+    gap: 15px;
+  }
+  .main > div{
+    padding-left: 20px ;
+    justify-content: flex-start;
+  }
+  .LOTR{
+    padding: 16px 0 0 0 ;
+    line-height: 1.1;
+    text-align: left;
+    font-size: 14px;
+  }
+  .registration{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    margin-bottom: 12px;
+  }
+  .registration img{
+    width: 24px;
+    height: 24px;
+  }
+  .registration button{
+    font-size: 15px;
+    width: 72px;
+    height: 32px;
+    border: none;
+    cursor: pointer;
+    
+  }
+  .registration button:first-child{
+    background-color: transparent;
+    margin-right: 16px;
+    
+
+  }
+  
+  .registration button:last-child{
+      background-color: #EF602A;
+      border-radius: 5px;
+  }
+  .content-container{
+    margin-bottom: 60px;
+  }
+  .main-table > .header::before{
+    width: 35%;
+  }
+  .table > .scrollbar{
+    height: 310px;
+  }
+  .key .table > .scrollbar{
+    height: 378px;
+  }
+  .key .table > .scrollbar{
+    margin-left: 0;
   }
 }
